@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BootStrap Flipkart</title>
+
+ <!--Bootstrap CSS -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+ <!--Bootstrap JavaScript -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script> 
+
+
+
+<style>
+
+
+
+
+
+
+
+
+* {
+
+margin:0px;
+padding:0px;
+box-sizing: border-box;
+font-family: 'poppins';
+
+} 
+
+
+#maincontainer {
+width:100%;
+position: relative;
+}
+
+
+#carouselExampleCaptions {
+height:500px;
+overflow: hidden;
+position: relative;
+}
+
+.carousel-caption {
+margin-bottom: 200px;
+}
+
+.d-block {
+  filter: brightness(45%);
+}
+
+#navbardiv1 {
+  width:70%;
+  color:white;
+  position: absolute;
+  top:10px;
+  left:249px;
+  z-index:999;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size:20px;
+}
+
+
+.navbarlogo1 {
+  margin-left:50px;
+  text-shadow: 0px 0px 5px #324032;
+}
+
+.navbarlinks {
+  margin: 0px 10px 0px 10px;
+  display: flex;
+  flex-direction: row;
+  column-gap: 50px;
+  text-shadow: 0px 0px 5px #324032;
+}
+
+.navbarbutton {
+  margin-right:120px;
+}
+
+
+.navbarlink1 {
+  text-decoration: none;
+  color:white;
+}
+
+.navbarlink1:hover {
+  color:#96bf94;
+  text-shadow: 0px 0px 1px #212a20;
+}
+
+.navbardivbutton {
+  border:none;
+  background-color: #d96d3a;
+  border-radius: 5px;
+  color:white;
+  font-size: 17px;
+  padding:5px 10px;
+}
+
+.navbardivbutton:hover {
+  background-color: #ff864e;
+}
+
+.dropdown-item {
+  color:white;
+  font-size: 17px;
+  text-decoration: dashed;
+}
+
+.dropdown-menu {
+  background-color: rgb(255, 255, 255,0.2);
+  border:none;
+}
+
+.dropdown-item:hover {
+  background-color: rgb(255, 255, 255,0.3);
+  color:white;
+}
+
+#introtextdiv {
+  width:300px;
+  height:230px;
+  position: absolute;
+  top:200px;
+  left:300px;
+}
+
+
+
+.intopara1 {
+  color:white;
+  font-size: 13px;
+  font-weight: 100;
+}
+
+.introheading1 {
+  color:white;
+  font-size: 30px;
+  margin-bottom:20px;
+  font-weight: 600;
+}
+
+.introbuttondiv1 {
+  font-size:13px;
+  padding:4px 10px;
+  color:white;
+  border:none;
+  background-color: #4e958f;
+  border-radius:3px;
+}
+
+.introbuttondiv1:hover {
+  background-color: #80b0ac;
+}
+
+#plantbgimgdiv {
+  width:100%;
+  height:1000px;
+  background-color: rgb(150, 191, 148,0.1);
+  position: relative;
+
+}
+
+#owldivcontainer {
+  width:940px;
+  height:550px;
+  background-color: white;
+  position:absolute;
+  box-shadow: 0px 10px 5px rgb(74, 73, 73,0.2);
+  top:-35px;
+  left:250px;
+  padding:10px;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  align-items: center;
+}
+
+#owncontainerimg {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.card {
+  border:none;
+  font-weight: 100;
+  color: #35575b;
+}
+
+.card-link {
+  text-decoration: none;
+  font-weight: 300;
+  color: #35575b;
+}
+
+.card-title {
+  font-weight: 400;
+  color: #35575b;
+}
+
+.card-text {
+  font-size: 12px;
+}
+
+.owlimggrid {
+  width:95%;
+}
+
+
+#cardimgholderdiv {
+  width:60%;
+  height:350px;
+  background-color: white;
+  position:absolute;
+  box-shadow: 0px 10px 5px rgb(74, 73, 73,0.2);
+  top:800px;
+  left:290px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 5px;
+}
+
+
+#textaboveimgcarddiv {
+  width:400px;
+  position:absolute;
+  top:650px;
+  left:500px;
+  text-align: center;
+}
+
+
+.intopara2 {
+  color:#35575b;
+  font-size: 13px;
+  font-weight: 100;
+}
+
+.introheading2 {
+  color:#35575b;
+  font-size: 30px;
+  margin-bottom:20px;
+  font-weight: 600;
+}
+
+
+.img-card1 {
+  color:white;
+}
+
+.card-div1 {
+  margin-top:280px;
+}
+
+#footercontainerdiv {
+  width:100%;
+  height:500px;
+  background-color: #f4f9f4;
+  position: relative;
+  top:300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 340px;
+  align-items: center;
+}
+
+.form-label {
+  color:#35575b;
+  font-size: 15px;
+}
+
+.contactHeadingT {
+  color:#35575b;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.contactparaT {
+  color:#35575b;
+  font-size: 12px;
+  font-weight: 100;
+}
+
+</style>
+
+
+
+<!--FOnt Family poppins-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
+
+
+
+</head>
+<body>
+
+
+<div id="maincontainer">
+
+<!--Carousel-->
+
+<div id="carouseldivMain">
+
+  <div id="carouselExampleCaptions" class="carousel slide"  data-bs-ride="carousel" title="BootStrap Carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="fw1.png" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <!--Space for caption-->
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="fw2.png" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <!--Space for caption-->
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="fw3.png" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block"> 
+          <!--Space for caption-->
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+</div>
+
+
+<!--Positioned Nav bar-->
+
+<div id="navbardiv1">
+
+<div class="navbarlogo1">Better Place Forest</div>
+
+<div class="navbarlinks">
+
+<div><a href="#" class="navbarlink1">Home</a></div>
+<div><a href="#" class="navbarlink1">Location</a></div>
+<div title="Bootstrap Dropdown" class="dropdown"><a href="#" class="navbarlink1 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Tree</a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Trees </a></li>
+    <li><a class="dropdown-item" href="#">More Trees</a></li>
+    <li><a class="dropdown-item" href="#">Some More Trees</a></li>
+  </ul>
+
+</div>
+
+</div>
+
+
+<div class="navbarbutton">
+  <button class="navbardivbutton">Get more Info</button>
+</div>
+
+
+</div>
+
+<!--Intro text-->
+
+<div id="introtextdiv">
+
+<p class="intopara1">Consectetur adipisicing elit</p>
+
+<h1 class="introheading1">Recusaae facilis</h1>
+
+<p class="intopara1">Lorem ipsum dolor sit amet consectetur perspiciatis recusandae laborum architecto ducimus autem enim, doloribus aliquam, porro rerum ab quasi corrupti in.</p>
+
+<button class="introbuttondiv1">Choose Tree</button>
+
+</div>
+
+
+<!--bg plant div-->
+
+<div id="plantbgimgdiv">
+
+    <div id="owldivcontainer">
+
+       <div id="owncontainertext">
+
+<!--bootstrap card-->
+  <div class="card" style="width: 18rem;" title="Bootstrap Card">
+
+    <div class="card-body">
+      <h5 class="card-title">Evergreen And Everlasting</h5>
+      <h6 style="color:#3c674e !important;" class="card-subtitle mb-2 text-body-secondary">accusamus hic animiiste</h6>
+      <p class="card-text">Lorem ipsum dolor sit amet, dolorem tempora nostrum, itaque corrupti adipisci fugiat minima quibusdam? Rerum ex nam laborum, architecto laboriosam magnam!</p>
+      <a href="#" class="card-link">Card link</a>
+      <a href="#" class="card-link">Another link</a>
+    </div>
+
+  </div>
+
+
+    </div>
+
+    <div id="owncontainerimg">
+
+      <img class="owlimggrid" src="https://images.pexels.com/photos/53977/eagle-owl-raptor-falconry-owl-53977.jpeg">
+
+      <img class="owlimggrid" src="https://images.pexels.com/photos/4215113/pexels-photo-4215113.jpeg?auto=compress&cs=tinysrgb&w=1200">
+
+    </div>
+
+</div>
+
+<!--Text above img cards-->
+<div id="textaboveimgcarddiv">
+
+<h1 class="introheading2">Explore The Forest</h1>
+
+<p class="intopara2">Lorem ipsum dolor sit amet consectetur perspiciatis recusandae laborum architecto ducimus autem enim, doloribus aliquam, porro rerum ab quasi corrupti in.</p>
+
+</div>
+
+
+<!--Bootstrap card img caption-->
+<div id="cardimgholderdiv" title="Bootstrap Image with caption">
+
+  <div class="card text-bg-dark">
+    <img src="https://images.pexels.com/photos/1414535/pexels-photo-1414535.jpeg" class="card-img" alt="...">
+    <div class="card-img-overlay card-div1">
+      <h5 class="card-title img-card1">Autem enim</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p class="card-text"><small>Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+
+
+  <div class="card text-bg-dark">
+    <img src="https://images.pexels.com/photos/1366921/pexels-photo-1366921.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="card-img" alt="...">
+    <div class="card-img-overlay card-div1">
+      <h5 class="card-title img-card1">Itaque corrupti</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p class="card-text"><small>Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+
+  <div class="card text-bg-dark">
+    <img src="https://images.pexels.com/photos/4383999/pexels-photo-4383999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="card-img" alt="...">
+    <div class="card-img-overlay card-div1">
+      <h5 class="card-title img-card1">Tempora</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p class="card-text"><small>Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+<!--Footer section-->
+
+<div id="footercontainerdiv">
+
+
+<div id="contatinfodiv">
+
+<p class="contactHeadingT">Call us</p>
+<p class="contactparaT">123-456-789, 789-234-354</p>
+<br>
+<p class="contactHeadingT">Location</p>
+<p class="contactparaT">121, Rock Street, 21 Avenue, NewYork</p>
+<br>
+<p class="contactHeadingT">Business Hours</p>
+<p class="contactparaT">Mon-Fri....8am - 6pm</p>
+
+</div>
+
+
+
+
+
+
+<div id="contactformdiv" title="Bootstrap form">
+
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Email</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Your Message</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+</div> <!--Main container end-->
+  
+</body>
+</html>
